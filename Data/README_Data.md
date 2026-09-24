@@ -1,4 +1,4 @@
-### \Data\ folder
+### Data/ directory
 
 Since the files used in the analysis take up a lot of memory, the queries submitted to download the same files using the Gaia Archive (ADQL, [https://gea.esac.esa.int/archive/](https://gea.esac.esa.int/archive/)) are provided below:
 
