@@ -1,6 +1,6 @@
 # Multi-Method Approach to membership selection in Ultra-Faint Dwarf Galaxies
 
-This repository provides any file which were used during the analysis of RR Lyrae population in six Ultra-Faint Dwarf Galaxies: Boötes I, Boötes III, CarinaII, Coma Berenices, Sagittarius II, Ursa Major I.
+This repository provides any file which were used during the analysis of RR Lyrae (RRL) population in six Ultra-Faint Dwarf Galaxies (UFDs): Boötes I, Boötes III, Carina II, Coma Berenices, Sagittarius II, Ursa Major I.
 
 Two complementary methodologies are applied to the $Gaia$ DR3 data: a classical approach and a statistical approach.
 
@@ -23,7 +23,7 @@ Two complementary methodologies are applied to the $Gaia$ DR3 data: a classical 
      - **`Output/`**: This directory is where the output files are saved.
 
 3.  **Statistical Approach** used machine learning techniques (DBSCAN, HDBSCAN) to associate RRLs across the sky with their host galaxy based on astrometric and photometric properties; it was performed with a Python pipeline (see `Clustering_pipeline/` directory): 
-   - Select sources with $G > 18 mag$ ('phot_g_mean_mag' > 18 mag) from `Data/vari_classifier_result.csv` catalogue by running `Clustering_18mag.ipynb`.
+   - Select sources with $G > 18$ mag ('phot_g_mean_mag' > 18 mag) from `Data/vari_classifier_result.csv` catalogue by running `Clustering_18mag.ipynb`.
    - Run the main script in `Clustering_pipeline/` directory:
 ```bash
 python main.py
@@ -36,4 +36,4 @@ python main.py
      - **`model.py`**: This file contains all the Machine Learning model which can be performed, in particular we used 'apply_dbscan' and 'apply_hdbscan' functions.
 
      - **`output/`**: This directory is where the output files are saved.
-  - Run `Clustering_UFDs.ipynb` to analyse the DBSCAN and HDBSCAN results computed by running the main script and to compare them with the RR Lyrae stars obtained as UFDs members with Classical Approach.
+  - Run `Clustering_UFDs.ipynb` to analyse the DBSCAN and HDBSCAN results computed by running the main script and to compare them with the RRLs obtained as Boötes I and Boötes III members with Classical Approach.
