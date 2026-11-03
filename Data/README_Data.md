@@ -23,16 +23,6 @@ WHERE 1=CONTAINS(POINT('ICRS',ra,dec),
 		CIRCLE('ICRS',209.3,26.8,10.0))
 		
 
-**`ComaBerenices_3.csv`**
-
-SELECT source_id, ra, ra_error, dec, dec_error, parallax, parallax_error, pm, pmra, pmra_error, pmdec, pmdec_error, phot_g_mean_mag, phot_bp_mean_mag, phot_rp_mean_mag, phot_g_mean_flux, phot_g_mean_flux_error, phot_bp_mean_flux, phot_bp_mean_flux_error, phot_rp_mean_flux, phot_rp_mean_flux_error
-
-FROM gaiadr3.gaia_source
-
-WHERE 1=CONTAINS(POINT('ICRS',ra,dec),
-		CIRCLE('ICRS',186.7454,23.9069,3.0))
-		
-
 **`CarinaII_3.csv`**
 
 SELECT source_id, ra, ra_error, dec, dec_error, parallax, parallax_error, pm, pmra, pmra_error, pmdec, pmdec_error, phot_g_mean_mag, phot_bp_mean_mag, phot_rp_mean_mag, phot_g_mean_flux, phot_g_mean_flux_error, phot_bp_mean_flux, phot_bp_mean_flux_error, phot_rp_mean_flux, phot_rp_mean_flux_error
@@ -41,6 +31,16 @@ FROM gaiadr3.gaia_source
 
 WHERE 1=CONTAINS(POINT('ICRS',ra,dec),
 		CIRCLE('ICRS',114.1066,-57.9991,3.0))
+
+		
+**`ComaBerenices_3.csv`**
+
+SELECT source_id, ra, ra_error, dec, dec_error, parallax, parallax_error, pm, pmra, pmra_error, pmdec, pmdec_error, phot_g_mean_mag, phot_bp_mean_mag, phot_rp_mean_mag, phot_g_mean_flux, phot_g_mean_flux_error, phot_bp_mean_flux, phot_bp_mean_flux_error, phot_rp_mean_flux, phot_rp_mean_flux_error
+
+FROM gaiadr3.gaia_source
+
+WHERE 1=CONTAINS(POINT('ICRS',ra,dec),
+		CIRCLE('ICRS',186.7454,23.9069,3.0))
 		
 		
 **`SagittariusII_3.csv`**
@@ -92,3 +92,9 @@ FROM gaiadr3.gaia_source
 JOIN gaiadr3.vari_rrlyrae
 
 using (source_id)
+
+
+
+---
+
+The **`vari_class_18mag.csv`** file was obtained with **`Clustering_18mag.ipynb`** Jupyter Notebook and it corresponds to the selection of RRLs with G > 18 mag from **`vari_classifier_result.csv`** catalogue, and this is useful for ML Clustering algorithms.
